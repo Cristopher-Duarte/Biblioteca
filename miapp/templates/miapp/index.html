@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Saludar</title>
-    
-
-</head>
-<body>
-    <h1>Biblioteca</h1>
-    <nav>
-        <ul>
-            <ul><a href="{% url 'Inicio' %}">inicio</a></ul>
-            <ul><a href="#">Libros</a></ul>
-            <ul><a href="#">Ejemplares</a></ul>
-            <ul><a href="#">Prestamos</a></ul>
-        </ul>
-    </nav>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block principal %}
+    <p>
+        Esta es mi pagina de inicio
+    </p>
+{% endblock %}
