@@ -11,7 +11,9 @@ class Libro(models.Model):
 class Ejemplar(models.Model):
     numeroejemplar = models.CharField(max_length=45)
     fechadecompra = models.DateField(null=False)
-    Libro = models.ForeignKey('Libro',on_delete=models.CASCADE)
+    Libro = models.ForeignKey('Libro',on_delete=models.CASCADE) 
+    def __str__(self):
+        return self.numeroejemplar +"-> " +str(self.Libro) 
 
 class Prestamo(models.Model):
     fechaprestamo = models.DateField(null=False)

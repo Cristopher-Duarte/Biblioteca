@@ -6,13 +6,13 @@
     <table class="table table-dark">
         <tr>
             <th>
-                Nombre
+                Ejemplar
             </th>
             <th>
-                Descripcion
+                Libro
             </th>
             <th>
-                ISBN
+                Fecha de Ejemplar
             </th>
             <th>
                 Editar
@@ -24,13 +24,15 @@
         {% for libro in object_list %}
         <tr>
             <td>
-                <a href="{% url 'Detalle_Libro' libro.pk %}">{{ libro.nombre }}</a>
+                <a href="{% url 'Detalle_Ejemplar' libro.pk %}">{{ libro.numeroejemplar }}</a>
             </td>
             <td>
-                {{ libro.descripcion }}
+                {{ libro.Libro}}
             </td>
             <td>
-                {{ libro.isbn }}
+               {{ libro.fechadecompra}}
+            </td>
+
             </td>
             <td>
                 <a href="{% url 'Editar_Libro' libro.id %}">Editar</a>
