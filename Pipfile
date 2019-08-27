@@ -9,6 +9,7 @@ verify_ssl = true
 pymysql = "*"
 django = "==2.1"
 pysqlclient = "*"
+pymysqlclient = "*"
 
 [requires]
 python_version = "3.7"

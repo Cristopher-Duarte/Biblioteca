@@ -39,3 +39,14 @@ class EjemplarList(ListView):
 class DetalleEjemplar(DetailView):
     model = Ejemplar
     template_name = 'miapp/detalle_ejemplar.html'
+
+class EjemplarUpdate(UpdateView):
+    model = Ejemplar
+    fields = ["numeroejemplar","Libro","fechadecompra"]
+    template_name = 'miapp/actualizar_ejemplar.html'
+    success_url = reverse_lazy('Ejemplar')
+    
+class EjemplarDelete(DeleteView):
+    model = Ejemplar
+    template_name = 'miapp/eliminar_ejemplar.html'
+    success_url = reverse_lazy('Ejemplar')

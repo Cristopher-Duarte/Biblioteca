@@ -35,10 +35,10 @@
 
             </td>
             <td>
-                <a href="{% url 'Editar_Libro' libro.id %}">Editar</a>
+                <a href="{% url 'Editar_Ejemplar' libro.id %}">Editar</a>
             </td>
             <td>
-                <a href="{% url 'Borrar_Libro' libro.id %}">Borrar</a>
+                <a href="{% url 'Eliminar_Ejemplar' libro.id %}">Borrar</a>
             </td>
         </tr>
         {% endfor%}
