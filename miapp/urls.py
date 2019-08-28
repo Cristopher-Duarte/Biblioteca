@@ -13,4 +13,5 @@ urlpatterns = [
     path('detalle_ejemplar/<int:pk>',DetalleEjemplar.as_view(),name='Detalle_Ejemplar'),
     path('ejemplar/editar/<int:pk>',EjemplarUpdate.as_view(),name='Editar_Ejemplar'),
     path('ejemplar/eliminar/<int:pk>',EjemplarDelete.as_view(),name='Eliminar_Ejemplar'),
+    path('ejemplar/nuevo/',EjemplarCreate.as_view(),name='Nuevo_Ejemplar'),
 ]

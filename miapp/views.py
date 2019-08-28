@@ -50,3 +50,8 @@ class EjemplarDelete(DeleteView):
     model = Ejemplar
     template_name = 'miapp/eliminar_ejemplar.html'
     success_url = reverse_lazy('Ejemplar')
+class EjemplarCreate(CreateView):
+    model = Ejemplar
+    fields = ["numeroejemplar","Libro","fechadecompra"]
+    template_name = 'miapp/nuevo_ejemplar.html'
+    success_url = reverse_lazy('Ejemplar')
