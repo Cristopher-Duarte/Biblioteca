@@ -21,9 +21,13 @@ class Prestamo(models.Model):
     telefonocliente = models.CharField(max_length=45)
     estado = models.BooleanField(null=False)
     def __str__(self):
-        return self.numeroejemplar
+        return self.nombrecliente
 
 class DetallelPrestamo(models.Model):
     Prestamo = models.ForeignKey('Prestamo',on_delete=models.CASCADE)
     Ejemplar = models.ForeignKey('Ejemplar',on_delete=models.CASCADE)
+    fechadevolucion = models.DateField("Fecha de Devolucion",null=True)
+
+    def __str__ (self):
+        return "{0},{1}".format(self.Prestamo,self.Ejemplar)
 

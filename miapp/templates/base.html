@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
+    <link rel="stylesheet" href="{% static 'css/editj.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
     button{
@@ -38,7 +38,10 @@ button:hover {
                     <a class="nav-link" href="{% url 'Ejemplar' %}">Ejemplares</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Prestamos</a>
+                    <a class="nav-link" href="{% url 'Listar_Prestamo' %}">Prestamos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Iniciar sesion</a>
                   </li>
              </ul>
     </nav>
