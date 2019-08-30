@@ -33,16 +33,23 @@ button:hover {
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="{% url 'Listar_libros' %}">Libros</a>
-                  </li>
+                  </li>              
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'Ejemplar' %}">Ejemplares</a>
                   </li>
+                  {% if user.is_authenticated %}
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'Listar_Prestamo' %}">Prestamos</a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Cerrar</a>
+                  </li>
+                  {% else %}
+                  <li class="nav-item">
                     <a class="nav-link" href="{% url 'login' %}">Iniciar sesion</a>
                   </li>
+                  {% endif %}
+
              </ul>
     </nav>
     {% block principal%}

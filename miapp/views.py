@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic.detail import DetailView
 from django.contrib.auth.views import LoginView, LogoutView
 from .models import *
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 def cargar_inicio(request):
     return render(request,"miapp/index.html")
@@ -16,7 +17,7 @@ class LibroList(ListView):
     model = Libro 
     template_name = 'miapp/lista_libros.html'
 
-class LibroCreate(CreateView):
+class LibroCreate(LoginRequiredMixin,CreateView):
     model = Libro
     fields = ["nombre","descripcion","isbn"]
     template_name = 'miapp/nuevo_libro.html'

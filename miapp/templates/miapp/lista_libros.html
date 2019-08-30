@@ -32,12 +32,14 @@
             <td>
                 {{ libro.isbn }}
             </td>
+            {% if user.is_authenticated %}
             <td>
                 <a href="{% url 'Editar_Libro' libro.id %}">Editar</a>
             </td>
             <td>
                 <a href="{% url 'Borrar_Libro' libro.id %}">Borrar</a>
             </td>
+            {% endif %}
         </tr>
         {% endfor%}
 

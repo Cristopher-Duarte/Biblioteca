@@ -32,7 +32,7 @@
             <td>
                {{ libro.fechadecompra}}
             </td>
-
+            {% if user.is_authenticated %}
             </td>
             <td>
                 <a href="{% url 'Editar_Ejemplar' libro.id %}">Editar</a>
@@ -40,6 +40,7 @@
             <td>
                 <a href="{% url 'Eliminar_Ejemplar' libro.id %}">Borrar</a>
             </td>
+            {% endif %}
         </tr>
         {% endfor%}
 

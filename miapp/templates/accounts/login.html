@@ -2,14 +2,16 @@
 
 {% block principal %}
 
+    <h2>Iniciar sesion
 
+    </h2>
 <form action="{% url 'login' %}" method="POST">
     {% csrf_token %}
     
     {{ form.as_p }}
     
     <div class="text-center">
-        <button type="submit">Iniciar sesion</button>
+        <button type="submit">Iniciar</button>
     </div>
     
     
